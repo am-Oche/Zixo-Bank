@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZIXO — Effortless payments. Intelligent finance.</title>
+<meta name="description" content="ZIXO is a digital money app for payments, cards, 30+ currencies and crypto swap — powered by licensed banking partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="zixo.css">
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo-mark" viewBox="0 0 80 110"><path d="M0 0H80V30A50 50 0 0 0 30 80V110H0Z"/><circle cx="62" cy="92" r="17"/></symbol>
+    <symbol id="logo-word" viewBox="0 0 228 60"><g fill="none" stroke="currentColor" stroke-width="13"><path d="M0 6.5H44Q51.5 6.5 51.5 14V22Q51.5 30 44 30H14Q6.5 30 6.5 38V53.5H58"/><path d="M76.5 0V60"/><path d="M102.5 0V12Q102.5 30 120 30H126Q143.5 30 143.5 12V0M102.5 60V48Q102.5 30 120 30H126Q143.5 30 143.5 48V60"/><rect x="164.5" y="6.5" width="57" height="47" rx="15"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-recv" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="8" cy="8" r="2.4"/><circle cx="16" cy="8" r="2.4"/><circle cx="8" cy="16" r="2.4"/><circle cx="16" cy="16" r="2.4"/></g></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15zM10 20.5h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 4v15M4 15l4 4 4-4M16 20V5M12 9l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9M9.5 4.5L12 7l2.5-2.5M9.5 19.5L12 17l2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="7" cy="7" r="1.6"/><circle cx="12" cy="7" r="1.6"/><circle cx="17" cy="7" r="1.6"/><circle cx="7" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="17" cy="12" r="1.6"/><circle cx="7" cy="17" r="1.6"/><circle cx="12" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></g></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 10.5h18" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M5 19V11M10 19V5M15 19v-6M20 19V8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-finger" viewBox="0 0 24 24"><path d="M7 10a5 5 0 0 1 10 0v2M12 10v5c0 2-1 4-2.5 5.5M9 10.5V13c0 2-.5 3.5-1.5 4.5M15 12.5c0 3-.6 5.5-2 7.5M5.5 15c.3-1 .5-2 .5-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.5-3 8-7 9.5-4-1.5-7-5-7-9.5V6z M9 12l2.2 2.2L15.5 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.9-.9-3.1-.8C6.8 7.3 5.3 8.3 4.5 9.7c-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.7c1.3 0 2.1-1.2 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.4-1-2.4-4zM14.1 5.6c.6-.8 1.1-1.8 1-2.9-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.7-1.3z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M4.5 3.3l9.8 8.7-9.8 8.7c-.3-.2-.5-.6-.5-1V4.3c0-.4.2-.8.5-1zM15.5 13.1l2.6 2.3-11 6.2zM15.5 10.9L7.1 2.4l11 6.2zM19.4 9.3l2.3 1.3c.8.5.8 1.6 0 2.1l-2.3 1.3-2.8-2.5z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr" data-screen-label="Header">
+  <div class="wrap">
+    <div class="hdr-in">
+      <a href="#top" aria-label="ZIXO home" style="display:flex;align-items:center;gap:10px">
+        <svg width="18" height="25"><use href="#logo-mark"/></svg>
+        <svg width="64" height="17" style="color:var(--ink)"><use href="#logo-word"/></svg>
+      </a>
+      <nav class="nav" aria-label="Primary" id="navMain"></nav>
+      <div class="hdr-cta">
+        <a href="#" class="btn btn-light btn-sm login">Log in</a>
+        <a href="#download" class="btn btn-dark btn-sm magnetic">Get started</a>
+        <button class="burger" aria-label="Open menu" id="burger"><svg width="20" height="20"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer-x" id="drawerX" aria-label="Close menu"><svg width="20" height="20"><use href="#i-x"/></svg></button>
+  <div id="navDrawer" style="display:flex;flex-direction:column"></div>
+  <div style="display:flex;gap:8px;margin-top:auto">
+    <a href="#" class="btn btn-light">Log in</a><a href="#download" class="btn btn-dark">Get started</a>
+  </div>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow rv">Payments · Cards · 30+ currencies · Swap</span>
+      <h1 class="h1 rv">Effortless payments.<br><span class="soft">Intelligent</span> finance.</h1>
+      <p class="lead rv">Send, spend, save and swap from one calm account. Real-time balances, clear fees and cards you control from your pocket.</p>
+      <div class="hero-ctas rv">
+        <a href="#download" class="btn btn-dark magnetic">Open an account <span class="ic" style="margin:0 -12px 0 0"><svg width="14" height="14"><use href="#i-arrow"/></svg></span></a>
+        <a href="#features" class="btn btn-light">See how it works</a>
+      </div>
+      <div class="hero-social rv">
+        <svg width="18" height="18"><use href="#i-shield"/></svg>
+        <span>Powered by licensed banking partners — <span class="confirm" title="Client to confirm partner name">partner name to confirm</span></span>
+      </div>
+    </div>
+
+    <div class="hero-stage" id="heroStage" aria-hidden="true">
+      <!-- background card -->
+      <div class="bcard pearl shimmer" data-par="-18" style="position:absolute;left:52%;top:40px;transform:rotate(12deg);width:300px">
+        <div class="t"><span>Credit <span style="color:var(--muted)">Card</span></span><span class="brand" style="font-style:normal;font-family:var(--font-sans);font-size:14px;font-weight:700">G Pay</span></div>
+        <div class="chip"></div>
+        <div class="b"><span>•••• 6050</span><span class="brand">VISA</span></div>
+      </div>
+      <!-- phone -->
+      <div class="phone" data-par="10" style="left:50%;top:30px;margin-left:-150px">
+        <div class="scr">
+          <div class="island"></div>
+          <div class="ph-status"><span>10:41</span><span>●●● ▮</span></div>
+          <div class="ph-top">
+            <span class="ph-av">AO</span>
+            <svg width="52" height="14" style="color:var(--ink)"><use href="#logo-word"/></svg>
+            <span class="ph-bell"><svg width="14" height="14"><use href="#i-bell"/></svg></span>
+          </div>
+          <div class="ph-bal">
+            <span class="ph-chip"><b style="font-style:italic">VISA</b> <span style="color:var(--muted)">•••• 9297</span></span>
+            <div class="lbl">Available balance</div>
+            <div class="amt money">$<span data-count="578395">578,395</span><span class="dec">.00</span></div>
+          </div>
+          <div class="ph-row">
+            <div class="ph-card">
+              <h6>Total income</h6>
+              <div class="mini-bars"><i style="height:30%"></i><i style="height:44%"></i><i style="height:38%"></i><i class="hi" style="height:96%"></i><i style="height:60%"></i><i style="height:40%"></i><i style="height:52%"></i></div>
+            </div>
+            <div class="ph-card">
+              <h6>Quick actions</h6>
+              <div class="qa">
+                <span style="background:#E7D6C6">TM</span><span style="background:#D6DCE6">KA</span><span style="background:#E2E0D2">CE</span>
+                <span style="background:#DCE5DA">FO</span><span style="background:#ECD9DC">IB</span><span style="background:var(--ink);color:#fff"><svg width="10" height="10"><use href="#i-plus"/></svg></span>
+              </div>
+            </div>
+          </div>
+          <div class="ph-tx">
+            <h6>Transactions</h6>
+            <div class="tx"><span class="lg" style="background:#1DB954">S</span><div><b>Spotify</b><small>Music · Oct 12</small></div><div class="v">−$10.99<small class="dn">Expense</small></div></div>
+            <div class="tx"><span class="lg" style="background:#38BC37">↓</span><div><b>Salary — Kora Labs</b><small>Income · Oct 10</small></div><div class="v up">+$4,200<small>Income</small></div></div>
+            <div class="tx"><span class="lg" style="background:#111">U</span><div><b>Uber</b><small>Transport · Oct 9</small></div><div class="v">−$18.40<small class="dn">Expense</small></div></div>
+          </div>
+          <div class="ph-dock">
+            <span><svg width="14" height="14"><use href="#i-send"/></svg>Transfer</span>
+            <span class="mid"><svg width="14" height="14"><use href="#i-grid"/></svg></span>
+            <span>Receive<svg width="14" height="14"><use href="#i-recv"/></svg></span>
+          </div>
+        </div>
+      </div>
+      <!-- floats -->
+      <div class="float glass" data-par="-26" style="left:0;top:120px;width:210px">
+        <div class="k">Monthly spending</div>
+        <div class="big money">$4,04<span class="dec">0.18</span></div>
+        <div style="font-size:12px;margin-top:4px"><span class="dn">▼ 5.2%</span> <span style="color:var(--muted)">vs September</span></div>
+      </div>
+      <div class="float glass" data-par="-40" style="right:0;bottom:120px;width:230px;display:flex;gap:12px;align-items:center">
+        <span style="width:40px;height:40px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff;flex:none"><svg width="16" height="16"><use href="#i-send"/></svg></span>
+        <div><div style="font-weight:600">Sent to Tobi M.</div><div class="k">₦250,000 · arrived in 4s</div></div>
+      </div>
+      <div class="float glass dark" data-par="-14" style="left:6%;bottom:40px;width:190px">
+        <div class="k" style="color:rgba(255,255,255,.5)">USD → NGN</div>
+        <div class="big">1,548.<span style="opacity:.4" data-tick="20">20</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,.5)">Mid-market · demo rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERS ============ -->
+<section aria-label="Partners" data-screen-label="02 Partners">
+  <div class="wrap">
+    <div class="partners rv">
+      <div><span><b></b>Banking partner</span></div><div><span><b></b>Card issuer</span></div><div><span><b></b>Payments</span></div>
+      <div><span><b></b>KYC provider</span></div><div><span><b></b>FX liquidity</span></div><div><span><b></b>Crypto custody</span></div>
+    </div>
+    <p style="text-align:center;font-size:12px;color:var(--faint);margin-top:12px">Partner logos — <span class="confirm">client to confirm</span></p>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="sec" id="about" data-screen-label="03 About">
+  <div class="wrap">
+    <span class="eyebrow rv">Why ZIXO</span>
+    <p class="statement" id="statement">ZIXO brings your accounts, cards, currencies and crypto into one clear view, so you always know what you have, where it went, and what it costs to move it.</p>
+    <div class="stats">
+      <div class="rv"><div class="n"><span data-count="30">30</span>+</div><p>Currencies to hold, send and convert at clearly shown rates.</p></div>
+      <div class="rv"><div class="n">3</div><p>Card types — Virtual, Physical and Business — each with instant freeze.</p></div>
+      <div class="rv"><div class="n">1</div><p>Dashboard for balances, spending, savings goals and swaps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE BENTO ============ -->
+<section class="sec" id="features" style="padding-top:0" data-screen-label="04 Features">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">Everything your money needs,<br><span class="soft">in one place.</span></h2>
+      <p class="lead rv">Built around the five things people told us they do most: check, send, spend, track and protect.</p>
+    </div>
+    <div class="bento">
+      <article class="glass b-7 rv">
+        <div class="vis">
+          <div style="position:relative;width:100%;height:220px">
+            <div class="bcard charcoal" style="position:absolute;left:12%;top:28px;width:250px;transform:rotate(-8deg)"><div class="t">Physical<small>Charcoal</small></div><div class="b"><span>•••• 1184</span><span class="brand">VISA</span></div></div>
+            <div class="bcard pearl shimmer" style="position:absolute;left:34%;top:4px;width:270px;transform:rotate(4deg)"><div class="t"><span>Virtual<small>Pearl</small></span></div><div class="chip"></div><div class="b"><span>•••• 6050</span><span class="brand">VISA</span></div></div>
+          </div>
+        </div>
+        <h3><span class="num">1</span>Manage your cards</h3>
+        <p>Issue virtual cards in seconds, set limits per card and freeze with one tap.</p>
+      </article>
+      <article class="glass b-5 rv">
+        <div class="vis">
+          <div style="width:100%;max-width:320px">
+            <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted)"><span>Spending · October</span><span>78% of budget</span></div>
+            <div class="budget" style="margin-top:10px"><i data-w="78%"></i></div>
+            <div style="display:flex;align-items:flex-end;gap:4px;height:120px;margin-top:22px">
+              <i style="flex:1;height:30%;background:#dcdcd8;border-radius:3px"></i><i style="flex:1;height:52%;background:#dcdcd8;border-radius:3px"></i><i style="flex:1;height:40%;background:#dcdcd8;border-radius:3px"></i><i style="flex:1;height:70%;background:#dcdcd8;border-radius:3px"></i><i style="flex:1;height:100%;background:var(--charcoal);border-radius:3px"></i><i style="flex:1;height:58%;background:#dcdcd8;border-radius:3px"></i><i style="flex:1;height:45%;background:#dcdcd8;border-radius:3px"></i>
+            </div>
+          </div>
+        </div>
+        <h3><span class="num">2</span>Smart analytics</h3>
+        <p>See spending by category, month and merchant without exporting a single CSV.</p>
+      </article>
+      <article class="glass b-4 rv">
+        <div class="vis">
+          <div style="display:flex">
+            <span class="ph-av" style="width:56px;height:56px;font-size:15px;background:#E7D6C6;border:3px solid #fff">TM</span>
+            <span class="ph-av" style="width:56px;height:56px;font-size:15px;background:#D6DCE6;border:3px solid #fff;margin-left:-14px">KA</span>
+            <span class="ph-av" style="width:56px;height:56px;font-size:15px;background:#DCE5DA;border:3px solid #fff;margin-left:-14px">FO</span>
+            <span class="ph-av" style="width:56px;height:56px;background:var(--ink);color:#fff;border:3px solid #fff;margin-left:-14px"><svg width="18" height="18"><use href="#i-plus"/></svg></span>
+          </div>
+        </div>
+        <h3><span class="num">3</span>Instant transfers</h3>
+        <p>Pay saved contacts by name, phone or account number.</p>
+      </article>
+      <article class="glass b-4 rv">
+        <div class="vis">
+          <div class="sbox" style="width:100%;max-width:260px;padding:14px 16px">
+            <div class="top"><span>You pay</span><span>Bal: <b>64.57 BNB</b></span></div>
+            <div class="mid"><span class="tok"><i style="background:#F3BA2F">B</i>BNB</span><span class="amt" style="font-size:30px">0.05</span></div>
+          </div>
+        </div>
+        <h3><span class="num">4</span>Swap coins</h3>
+        <p>Move between crypto and stablecoins with the fee shown up front.</p>
+      </article>
+      <article class="glass b-4 rv">
+        <div class="vis">
+          <div class="rings" style="max-width:180px;filter:invert(1) hue-rotate(180deg) brightness(1.02)">
+            <i style="width:100%;height:100%"></i><i style="width:76%;height:76%"></i><i style="width:52%;height:52%"></i><i class="core"></i>
+          </div>
+        </div>
+        <h3><span class="num">5</span>Account security</h3>
+        <p>Biometric login, device approvals and real-time alerts on every payment.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE TABS ============ -->
+<section class="sec" style="padding-top:0" data-screen-label="05 How it works">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px">
+      <h2 class="h2 rv">Work from anywhere,<br><span class="soft">stay in control.</span></h2>
+      <div class="rv" style="justify-self:end"><div class="seg" role="tablist" aria-label="Product features" data-tabs="ftab" data-url="feature"></div></div>
+    </div>
+    <div class="ftabs-panel">
+      <div class="glass copy rv" id="ftabCopy"></div>
+      <div class="glass pearl stage rv" id="ftabStage"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CURRENCIES ============ -->
+<section class="sec" id="currencies" style="background:linear-gradient(180deg,transparent,var(--bg-2) 30%,var(--bg-2) 70%,transparent)" data-screen-label="06 Currencies">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">Hold and send in<br><span class="soft">30+ currencies.</span></h2>
+      <div class="rv" style="justify-self:end;display:flex;flex-direction:column;gap:16px;align-items:flex-end">
+        <p class="lead" style="text-align:right">The rate you see is the rate you get, with the fee broken out before you confirm.</p>
+        <div class="seg" role="tablist" aria-label="Currency groups" data-tabs="cgroup"></div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee rv"><div class="track" id="mq1"></div></div>
+  <div class="marquee rv" style="margin-top:4px"><div class="track rev" id="mq2"></div></div>
+  <div class="wrap">
+    <div class="glass conv rv" id="conv">
+      <div class="conv-f">
+        <label for="cvAmt"><span>You send</span><span id="cvBal">Balance: $12,480.55</span></label>
+        <div class="row"><input id="cvAmt" inputmode="decimal" value="1,000" aria-label="Amount to send"><select id="cvFrom" aria-label="From currency"></select></div>
+      </div>
+      <button class="swapbtn" id="cvSwap" aria-label="Swap direction"><svg width="20" height="20"><use href="#i-swap"/></svg></button>
+      <div class="conv-f">
+        <label for="cvOut"><span>They receive</span><span id="cvRate">—</span></label>
+        <div class="row"><input id="cvOut" readonly aria-label="Amount received"><select id="cvTo" aria-label="To currency"></select></div>
+      </div>
+      <div class="conv-meta"><span>Transfer fee <b id="cvFee" style="color:var(--ink);font-weight:500">—</b> · Basic plan</span><span>Demo rates · refreshed <span id="cvTime">just now</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SWAP ============ -->
+<section class="sec" id="swap" data-screen-label="07 Swap">
+  <div class="wrap">
+    <h2 class="h1 rv" style="font-size:clamp(40px,4.6vw,66px);max-width:14ch;margin-bottom:64px">Seamless swaps for a better <span class="soft">money experience.</span></h2>
+    <div class="swap-grid">
+      <div class="callouts">
+        <div class="callout rv"><span class="ico"><svg width="20" height="20"><use href="#i-bolt"/></svg></span><div><h4>A few taps, start to finish</h4><p>Pick a pair, enter an amount, slide to confirm. Network and balance are detected for you.</p></div></div>
+        <div class="callout rv"><span class="ico"><svg width="20" height="20"><use href="#i-swap"/></svg></span><div><h4>Live rates, transparent fees</h4><p>Rates tick in real time and the network fee is shown before you commit.</p></div></div>
+        <div class="callout rv"><span class="ico"><svg width="20" height="20"><use href="#i-lock"/></svg></span><div><h4>Custody by a regulated partner</h4><p>Crypto is held by <span class="confirm">custody partner — client to confirm</span>.</p></div></div>
+      </div>
+      <div class="glass swap-panel rv" id="swapPanel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin:4px 4px 16px">
+          <span class="serif" style="font-size:24px">Swap coins</span>
+          <div class="seg" role="tablist" aria-label="Swap mode" data-tabs="swapmode"></div>
+        </div>
+        <div class="sbox" id="sPay">
+          <div class="top"><span>You pay</span><span>Balance: <b id="sPayBal">64.57 BNB</b><button class="max" id="sMax">Max</button></span></div>
+          <div class="mid"><button class="tok" id="sPayTok"></button><span class="amt" id="sPayAmt">0.05</span></div>
+          <div class="usd" id="sPayUsd">≈ 30.00 USD</div>
+        </div>
+        <button class="sflip" id="sFlip" aria-label="Flip pair"><svg width="16" height="16"><use href="#i-swap"/></svg></button>
+        <div class="sbox" id="sGet">
+          <div class="top"><span>You receive</span><span>Balance: <b id="sGetBal">187.52 USDT</b></span></div>
+          <div class="mid"><button class="tok" id="sGetTok"></button><span class="amt" id="sGetAmt">30.20</span></div>
+          <div class="usd" id="sGetUsd">≈ 30.20 USD</div>
+        </div>
+        <div class="sdetails">
+          <div><span>Rate</span><b id="sRate">—</b></div>
+          <div><span>Network fee</span><b id="sFee">—</b></div>
+          <div><span>Pair</span><span id="sPairs" style="display:flex;gap:4px"></span></div>
+        </div>
+        <div class="slide" id="slide"><div class="fill"></div><span class="lbl">Slide to swap  ›››</span><div class="h" tabindex="0" role="slider" aria-label="Slide to confirm swap" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><svg width="18" height="18"><use href="#i-chev"/></svg></div></div>
+        <p class="risk">Crypto assets are volatile; you may lose money. Not available in all regions. Demo only — no funds move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARDS ============ -->
+<section class="sec" id="cards" data-screen-label="08 Cards">
+  <div class="wrap cards-wrap">
+    <div>
+      <span class="eyebrow rv">Cards</span>
+      <h2 class="h2 rv" style="margin-top:16px">Manage <span class="serif" style="font-size:1.12em">your cards</span>,<br><span class="soft">not your stress.</span></h2>
+      <p class="lead rv" style="margin-top:20px">Three cards, one app. Drag through the stack or pick a type to see what each one does.</p>
+      <div class="rv" style="margin-top:28px"><div class="seg" role="tablist" aria-label="Card type" data-tabs="ctype" data-url="card"></div></div>
+      <ul class="spec rv" id="cardSpec"></ul>
+    </div>
+    <div class="rv">
+      <div class="fan" id="fan"></div>
+      <div class="dots" id="cardDots" aria-label="Card finish"></div>
+      <div class="card-actions">
+        <button class="cact"><span><svg width="18" height="18"><use href="#i-pin"/></svg></span>Show PIN</button>
+        <button class="cact"><span><svg width="18" height="18"><use href="#i-card"/></svg></span>Card details</button>
+        <button class="cact" id="freezeBtn" aria-pressed="false"><span><svg width="18" height="18"><use href="#i-snow"/></svg></span><em style="font-style:normal" id="freezeLbl">Freeze card</em></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANALYTICS ============ -->
+<section class="sec" id="insights" style="padding-top:40px" data-screen-label="09 Insights">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">See where every<br><span class="soft">naira and dollar goes.</span></h2>
+      <p class="lead rv">Income, spending and categories update the moment a payment clears.</p>
+    </div>
+    <div class="glass an rv">
+      <div class="an-side">
+        <div class="seg" role="tablist" aria-label="Metric" data-tabs="metric"></div>
+        <div>
+          <div style="font-size:14px;color:var(--muted)" id="anLbl">My income</div>
+          <div class="an-big money" id="anBig">$12,058<span class="dec">.00</span></div>
+          <div style="font-size:13px;margin-top:6px" id="anDelta"></div>
+        </div>
+        <div class="donut">
+          <svg width="96" height="96" viewBox="0 0 42 42" id="donut" aria-label="Spending by category"></svg>
+          <div style="display:grid;gap:6px;font-size:13px" id="donutLegend"></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:8px"><span>Monthly budget</span><b style="font-weight:600">$3,140 / $4,000</b></div>
+          <div class="budget"><i data-w="78.5%"></i></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span class="serif" style="font-size:26px">Monthly overview</span>
+          <div class="seg" role="tablist" aria-label="Range" data-tabs="range"></div>
+        </div>
+        <div class="chart" id="chart"><span class="tip" id="tip"></span></div>
+        <div class="axis" id="axis"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY ============ -->
+<section class="dark-sec" id="security" data-screen-label="10 Security">
+  <div class="sec wrap">
+    <div class="sec-grid">
+      <div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;letter-spacing:.08em;color:rgba(255,255,255,.5);max-width:420px" class="rv"><span>SECURITY</span><span style="flex:1;border-top:1px solid rgba(255,255,255,.2);margin:9px 16px 0"></span><span>BANK-LEVEL</span></div>
+        <h2 class="h2 rv" style="margin-top:28px">Serious security<br><span class="soft">for everyday</span> money.</h2>
+        <p class="lead rv" style="margin-top:20px">Every payment, transfer and login is protected with encryption in transit and at rest, multi-factor checks and live fraud monitoring.</p>
+        <div class="chips rv">
+          <span><svg width="16" height="16"><use href="#i-finger"/></svg>Biometric login</span>
+          <span><svg width="16" height="16"><use href="#i-lock"/></svg>E2E encryption</span>
+          <span><svg width="16" height="16"><use href="#i-shield"/></svg>Fraud detection</span>
+          <span><svg width="16" height="16"><use href="#i-pin"/></svg>Multi-factor</span>
+        </div>
+        <div class="sec-list rv">
+          <div><b>Freeze in one tap</b><p>Lost a card? Freeze it from the app and unfreeze when it turns up.</p></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><div><b>2FA on new devices</b><p>Approve each new phone before it can see your money.</p></div><button class="toggle" role="switch" aria-checked="true" aria-label="Two-factor authentication" id="tfa"></button></div>
+          <div><b>Real-time alerts</b><p>A notification for every card payment, transfer and login.</p></div>
+          <div><b>Funds held with partners</b><p><span class="confirm">Safeguarding / insurance wording — client to confirm</span></p></div>
+        </div>
+      </div>
+      <div class="rings rv" id="rings">
+        <span class="lock"><svg width="18" height="18"><use href="#i-lock"/></svg></span>
+        <i style="width:100%;height:100%"></i><i style="width:80%;height:80%"></i><i style="width:60%;height:60%"></i><i style="width:40%;height:40%"></i><i class="core"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="sec" id="pricing" data-screen-label="11 Pricing">
+  <div class="wrap">
+    <div style="text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px">
+      <span class="eyebrow rv">Pricing</span>
+      <h2 class="h2 rv">Simple plans for <span class="serif" style="font-size:1.12em">every</span> stage.</h2>
+      <div class="rv"><div class="seg" role="tablist" aria-label="Billing period" data-tabs="billing" data-url="billing"></div></div>
+    </div>
+    <div class="plans" id="plans"></div>
+    <p class="tbl-note">Prices in USD. Fees and limits shown are draft values — <span class="confirm">client to confirm</span>.</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="sec" id="testimonials" style="padding-top:0" data-screen-label="12 Testimonials">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2 rv">Loved by people who<br><span class="soft">like clarity.</span></h2>
+      <div class="rv" style="justify-self:end"><span class="sample">● Sample content — shown in dev only, hidden in production</span></div>
+    </div>
+    <div class="tgrid">
+      <figure class="glass tcard rv"><q>I used to keep three apps open to see where my salary went. Now I check one screen on the bus.</q><figcaption class="who"><span style="background:#E7D6C6">CN</span><div>Chiamaka N.<small>Sample · Product designer, Lagos</small></div></figcaption></figure>
+      <figure class="glass tcard pearl rv"><q>Paying my team in Accra and Nairobi from a single USD balance saved me hours every month.</q><figcaption class="who"><span style="background:#D6DCE6">DA</span><div>David A.<small>Sample · Founder, Abuja</small></div></figcaption></figure>
+      <figure class="glass tcard rv"><q>Freezing my card from the app the second I lost my wallet was the moment I stopped worrying.</q><figcaption class="who"><span style="background:#DCE5DA">SO</span><div>Sade O.<small>Sample · Nurse, London</small></div></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq" style="padding-top:0" data-screen-label="13 FAQ">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow rv">FAQ</span>
+      <h2 class="h2 rv" style="margin-top:16px">Questions,<br><span class="soft">answered.</span></h2>
+      <div class="rv" style="margin-top:28px"><div class="seg" role="tablist" aria-label="FAQ category" data-tabs="faqcat"></div></div>
+      <p class="lead rv" style="margin-top:28px;font-size:15px">Can't find it? <a href="#" style="color:var(--ink);border-bottom:1px solid">Visit the help centre</a> or message support in the app.</p>
+    </div>
+    <div class="acc" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD CTA ============ -->
+<section class="wrap" id="download" style="padding-bottom:clamp(60px,8vw,120px)" data-screen-label="14 Download">
+  <div class="glass pearl dl rv">
+    <div style="display:flex;flex-direction:column;justify-content:center;position:relative;z-index:3">
+      <h2 class="h2" style="font-size:clamp(36px,4vw,56px)">Every financial tool you need,<br><span class="soft">in your pocket.</span></h2>
+      <p class="lead" style="margin-top:18px">Download ZIXO and open an account in minutes. Have your ID ready for a quick verification.</p>
+      <div style="display:flex;gap:10px;margin-top:28px;flex-wrap:wrap">
+        <a href="#" class="store magnetic"><svg width="22" height="22"><use href="#i-apple"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
+        <a href="#" class="store magnetic"><svg width="20" height="20"><use href="#i-play"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+      </div>
+      <div class="qr-wrap"><div class="qr"><div></div></div><span>Scan with your phone<br>camera to download.<br><span class="confirm">QR — final link to confirm</span></span></div>
+    </div>
+    <div style="position:relative;min-height:420px">
+      <div class="phone" style="right:8%;top:30px;transform:rotate(-8deg);width:270px;height:560px">
+        <div class="scr">
+          <div class="island"></div>
+          <div class="ph-status"><span>10:41</span><span>●●● ▮</span></div>
+          <div class="ph-top"><span class="ph-av">AO</span><span class="serif" style="font-size:18px">Manage cards</span><span class="ph-bell"><svg width="14" height="14"><use href="#i-bell"/></svg></span></div>
+          <div class="bcard pearl" style="width:220px;margin:40px auto 0;transform:rotate(90deg) translateX(50px);transform-origin:center"><div class="t">Credit <small>Card</small></div><div class="chip"></div><div class="b"><span>•••• 6050</span><span class="brand">VISA</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot" data-screen-label="15 Footer">
+  <div class="wrap foot-top">
+    <div>
+      <a href="#top" style="display:flex;align-items:center;gap:10px;color:#fff"><svg width="20" height="28" style="fill:#fff"><use href="#logo-mark"/></svg><svg width="72" height="19"><use href="#logo-word"/></svg></a>
+      <p style="color:rgba(255,255,255,.55);font-size:14px;margin-top:20px;max-width:32ch">Stay in the loop. Product updates and money tips, once a month.</p>
+      <form class="news" onsubmit="event.preventDefault();this.querySelector('button').textContent='Subscribed ✓'"><input type="email" required placeholder="you@email.com" aria-label="Email address"><button class="btn btn-sm" style="background:#fff;color:var(--ink)">Subscribe</button></form>
+    </div>
+    <div id="footCols" style="display:contents"></div>
+  </div>
+  <div class="wordmark-xl" aria-hidden="true"><svg viewBox="0 0 228 60" style="color:#fff"><use href="#logo-word"/></svg></div>
+  <div class="wrap foot-legal">
+    <p>ZIXO is a financial technology company, not a bank. Banking services are provided by <span class="confirm">[licensed banking partner — client to confirm]</span>. Cards are issued by <span class="confirm">[issuer — client to confirm]</span>. Crypto assets are volatile and not protected by any deposit insurance scheme; you may lose money. © 2026 ZIXO.</p>
+    <div style="display:flex;gap:18px;align-items:flex-start;white-space:nowrap"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a><a href="#">Disclosures</a></div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="zixo-content.js"></script>
+<script src="zixo-home.js"></script>
+</body>
+</html>
